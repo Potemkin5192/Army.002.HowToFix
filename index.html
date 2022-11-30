@@ -2105,10 +2105,10 @@ p.nominalBounds = new cjs.Rectangle(-1350,-1350,2700,2700);
 		window.addEventListener('resize', onResize);
 		function onResize(event) {
 			if (document.documentElement.clientWidth < document.documentElement.clientHeight) {
-				main.setTransform(document.documentElement.clientWidth * .5, document.documentElement.clientHeight * .5, document.documentElement.clientHeight / 1000, document.documentElement.clientHeight / 1000);
+				main.setTransform(document.documentElement.clientWidth * .5, document.documentElement.clientHeight * .5, document.documentElement.clientWidth / 1000, document.documentElement.clientWidth / 1000);
 			}
 			if (document.documentElement.clientWidth > document.documentElement.clientHeight || document.documentElement.clientWidth == document.documentElement.clientHeight) {
-				main.setTransform(document.documentElement.clientWidth * .5, document.documentElement.clientHeight * .5, document.documentElement.clientWidth / 1000, document.documentElement.clientWidth / 1000);
+				main.setTransform(document.documentElement.clientWidth * .5, document.documentElement.clientHeight * .5, document.documentElement.clientHeight / 1000, document.documentElement.clientHeight / 1000);
 			}
 			resizeCanvas(canvas, ctx, document.documentElement.clientWidth, document.documentElement.clientHeight);
 		}
