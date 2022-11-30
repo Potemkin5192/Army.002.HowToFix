@@ -1945,7 +1945,7 @@ p.nominalBounds = new cjs.Rectangle(-1350,-1350,2700,2700);
 		var splashSound = new Audio('splash.mp3');
 		var fireSound = new Audio('fire.mp3');
 		var upgradeSound = new Audio('upgrade.mp3');
-		var electroSound = new Audio('electro.mp3');
+		//var electroSound = new Audio('electro.mp3');
 		var fixedSound = new Audio('fixed.mp3');
 		var swooshFX = new Audio('swoosh.mp3');
 		var btnFX = new Audio('button.mp3');
@@ -2029,10 +2029,10 @@ p.nominalBounds = new cjs.Rectangle(-1350,-1350,2700,2700);
 		function fireSoundPlay() {
 			fireSound.play();
 		}
-		window.addEventListener('electroSoundPlay', electroSoundPlay)
-		function electroSoundPlay() {
-			electroSound.play();
-		}
+		//window.addEventListener('electroSoundPlay', electroSoundPlay)
+		//function electroSoundPlay() {
+		//	electroSound.play();
+		//}
 		window.addEventListener('upgradeSoundPlay', upgradeSoundPlay)
 		function upgradeSoundPlay() {
 			upgradeSound.play();
@@ -2076,7 +2076,7 @@ p.nominalBounds = new cjs.Rectangle(-1350,-1350,2700,2700);
 				btnFX.volume = 0;
 				fireSound.volume = 0;
 				splashSound.volume = 0;
-				electroSound.volume = 0;
+				//electroSound.volume = 0;
 				upgradeSound.volume = 0;
 				fixedSound.volume = 0;
 			} else {
@@ -2086,7 +2086,7 @@ p.nominalBounds = new cjs.Rectangle(-1350,-1350,2700,2700);
 					btnFX.volume = 1;
 					fireSound.volume = 1;
 					splashSound.volume = 1;
-					electroSound.volume = 1;
+					//electroSound.volume = 1;
 					upgradeSound.volume = 1;
 					fixedSound.volume = 1;
 				} else {
@@ -2095,7 +2095,7 @@ p.nominalBounds = new cjs.Rectangle(-1350,-1350,2700,2700);
 					btnFX.volume = 0;
 					fireSound.volume = 0;
 					splashSound.volume = 0;
-					electroSound.volume = 0;
+					//electroSound.volume = 0;
 					upgradeSound.volume = 0;
 					fixedSound.volume = 0;
 				}
