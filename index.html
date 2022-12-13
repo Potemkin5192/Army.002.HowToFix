@@ -2420,7 +2420,7 @@ p.nominalBounds = new cjs.Rectangle(-1500,-1500,3000,3000);
 			musicBG.canBePlayed = false;
 			window.open();
 		}
-		document.addEventListener("visibilitychange", handleVisibilityChange, false);
+		/*document.addEventListener("visibilitychange", handleVisibilityChange, false);
 		function handleVisibilityChange() {
 			if (document.visibilityState === "hidden") {
 				musicBG.volume = 0;
@@ -2438,19 +2438,19 @@ p.nominalBounds = new cjs.Rectangle(-1500,-1500,3000,3000);
 				explosionMinSFX.volume = 0;
 			} else {
 				if (musicBG.canBePlayed) {
-			musicBG.volume = 1;
-			swooshSFX.volume = 1;
-			btnSFX.volume = 1;
-			fireSFX.volume = 1;
-			successSFX.volume = 1;
-			upgradeSFX.volume = 1;
-			fixedSFX.volume = 1;
-			foamSFX.volume = 1;
-			alarmSFX.volume = 1;
-			failSFX.volume = 1;
-			shootingSFX.volume = 1;
-			explosionSFX.volume = 1;
-			explosionMinSFX.volume = 1;
+					musicBG.volume = 1;
+					swooshSFX.volume = 1;
+					btnSFX.volume = 1;
+					fireSFX.volume = 1;
+					successSFX.volume = 1;
+					upgradeSFX.volume = 1;
+					fixedSFX.volume = 1;
+					foamSFX.volume = 1;
+					alarmSFX.volume = 1;
+					failSFX.volume = 1;
+					shootingSFX.volume = 1;
+					explosionSFX.volume = 1;
+					explosionMinSFX.volume = 1;
 				} else {
 					musicBG.volume = 0;
 					swooshSFX.volume = 0;
@@ -2467,7 +2467,7 @@ p.nominalBounds = new cjs.Rectangle(-1500,-1500,3000,3000);
 					explosionMinSFX.volume = 0;
 				}
 			}
-		}
+		}*/
 	}
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).wait(1).call(this.frame_1).wait(1));
