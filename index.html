@@ -2526,9 +2526,10 @@ p.nominalBounds = new cjs.Rectangle(-1500,-1500,3000,3000);
 		tryAgainBtn.addEventListener('click', function () {
 			if (counter == 0) {
 				base.gotoAndStop(0);
+				main.gotoAndStop(0);
 				main.drones.gotoAndPlay(1);
-				main.bottom.visible = true;
 				main.bottom.gotoAndStop(0);
+				main.bottom.visible = true;
 				musicBG.pause();
 				fireSFX.pause();
 				failSFX.pause();
@@ -2635,8 +2636,8 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"index_atlas_P_.png?1670929843129", id:"index_atlas_P_"},
-		{src:"index_atlas_NP_.jpg?1670929843129", id:"index_atlas_NP_"}
+		{src:"index_atlas_P_.png?1670930667857", id:"index_atlas_P_"},
+		{src:"index_atlas_NP_.jpg?1670930667858", id:"index_atlas_NP_"}
 	],
 	preloads: []
 };
