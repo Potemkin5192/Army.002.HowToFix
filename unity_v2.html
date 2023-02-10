@@ -2171,16 +2171,14 @@ p.nominalBounds = new cjs.Rectangle(-554,-551,1102.1,1102.1);
 	this.initialize(mode,startPosition,loop,{});
 	// timeline functions:
 	this.frame_0 = function() {
-		this.drone1.gotoAndStop(19);
-		this.drone2.gotoAndStop(19);
 		this.stop();
 	}
 	this.frame_7 = function() {
 		window.dispatchEvent(new Event('playAlarm'));
 	}
 	this.frame_76 = function() {
-		this.drone1.play();
-		this.drone2.play();
+		this.drone1.gotoAndPlay(1);
+		this.drone2.gotoAndPlay(1);
 	}
 	this.frame_106 = function() {
 		window.dispatchEvent(new Event('playExplosion'));
@@ -2507,6 +2505,7 @@ p.nominalBounds = new cjs.Rectangle(-1500,-1500,3000,3000);
 		extingushBtn.addEventListener('click', extingushClick)
 		function extingushClick() {
 			if (extingushBtn.clickable) {
+				musicBG.canBePlayed = true;
 				base.gotoAndPlay(25);
 				main.bottom.gotoAndPlay(20);
 				btnSFX.play();
@@ -2597,7 +2596,7 @@ whatDevice();
 function whatDevice ()
 {
 	if (getPlatform() == "iPhone") {
-		goToLin = "https://play.google.com/store/apps/details?id=hotsiberians.idle.military.operation.army.mission.tycoon";
+		goToLin = "https://apps.apple.com/ru/app/idle-forces-army-tycoon/id6443393152";
 		} else if (getPlatform() == "Android") {
 		goToLin = "https://play.google.com/store/apps/details?id=hotsiberians.idle.military.operation.army.mission.tycoon";
 		}
@@ -2817,10 +2816,26 @@ function handleComplete(evt,comp) {
 	AdobeAn.compositionLoaded(lib.properties.id);
 	fnStartAnimation();
 }
+function viewableChangeHandler(viewable) {
+// start/pause/resume gameplay, stop/play sounds
+	if(viewable) {
+		init();
+	} else {
+	 // pause
+		mraid.unload()
+	}
+}
+function onSdkReady() {
+	mraid.addEventListener('viewableChange', viewableChangeHandler);
+	// Wait for the ad to become viewable for the first time
+	if (mraid.isViewable()) {
+	 init();
+	}
+}
 </script>
 <!-- write your code here -->
 </head>
-<body onload="init();" style="margin:0px;">
+<body onload="onSdkReady();" style="margin:0px;">
 	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:100%; height:100%">
 		<canvas id="canvas" width="100%" height="1000" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:100%; height:100%; position: absolute; left: 0px; top: 0px; display: block;">
